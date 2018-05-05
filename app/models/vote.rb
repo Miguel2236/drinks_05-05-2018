@@ -1,3 +1,3 @@
 class Vote < ApplicationRecord
-	belongs_to :drink
+	belongs_to :drink, counter_cache: true
 end
