@@ -61,6 +61,13 @@ class DrinksController < ApplicationController
     end
   end
 
+  #TODO: REfactor = move to separate controller
+  def upvote
+    @drink = Drink.find(params[:id])
+    @drink.votes.create
+    redirect_to drinks_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_drink

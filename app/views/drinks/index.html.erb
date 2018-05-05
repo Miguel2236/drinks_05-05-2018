@@ -16,6 +16,8 @@
       <tr>
         <td><%= drink.title %></td>
         <td><%= drink.description %></td>
+        <td><%= pluralize(drink.votes.count, "vote") %></td>
+        <td><%= button_to '+1', upvote_drink_path(drink), methos: :post %></td>
         <td><%= link_to 'Show', drink %></td>
         <td><%= link_to 'Edit', edit_drink_path(drink) %></td>
         <td><%= link_to 'Destroy', drink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
