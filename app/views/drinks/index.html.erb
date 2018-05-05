@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Description</th>
+      <th>Votes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,13 +14,13 @@
   <tbody>
     <% @drinks.each do |drink| %>
       <tr>
-        <td><%= drink.title %></td>
-        <td><%= drink.description %></td>
+        <td><%= link_to drink.title, drink %></td>
+        <!-- <td><%= drink.description %></td> -->
         <td><%= pluralize(drink.votes.count, "vote") %></td>
         <td><%= button_to '+1', upvote_drink_path(drink), methos: :post %></td>
-        <td><%= link_to 'Show', drink %></td>
-        <td><%= link_to 'Edit', edit_drink_path(drink) %></td>
-        <td><%= link_to 'Destroy', drink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       <!--  <td><%= link_to 'Show', drink %></td> -->
+        <!-- <td><%= link_to 'Edit', edit_drink_path(drink) %></td>
+        <td><%= link_to 'Destroy', drink, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>

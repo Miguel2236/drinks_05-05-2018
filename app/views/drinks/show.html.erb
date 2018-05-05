@@ -11,4 +11,5 @@
 </p>
 
 <%= link_to 'Edit', edit_drink_path(@drink) %> |
+<%= link_to 'Destroy', @drink, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', drinks_path %>
