@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :drinks do
   	member do
-  	post :upvote
+  		post :upvote
+  	end
   end
 
   root "drinks#index"
